@@ -9,12 +9,14 @@ class Solution:
         # two pointer
         slow = nums[0]
         fast = nums[0]
+        # first loop to detect if there is a cycle in the list
         while True:
             slow = nums[slow]
             fast = nums[nums[fast]]
             if slow == fast:
                 break
 
+        # second loop to detect if there is duplicate element
         slow2 = nums[0]
         while slow2 != slow:
             slow = nums[slow]
