@@ -13,5 +13,12 @@ class Solution:
             slow = nums[slow]
             fast = nums[nums[fast]]
             if slow == fast:
-                return slow
+                break
+
+        slow2 = nums[0]
+        while slow2 != slow:
+            slow = nums[slow]
+            slow2 = nums[slow2]
+        
+        return slow
         
